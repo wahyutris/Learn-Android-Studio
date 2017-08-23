@@ -1,18 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.wahyutrisvianto.secondapp.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_yes_atas"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:rotation="180"
+            android:text="Yes"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/button_no_atas"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorAccent"
+            android:text="No"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
+
     <TextView
+        android:id="@+id/score_atas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="63dp"
+        android:rotation="180"
+        android:text="0"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/score_bawah"
+        android:layout_alignStart="@+id/score_bawah" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/pertanyaan_atas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_atas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:rotation="180"
+        android:text="TextView"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/garis" />
+
+    <TextView
+        android:id="@+id/pertanyaan_bawah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pertanyaan_atas"
+        android:layout_alignStart="@+id/pertanyaan_atas"
+        android:layout_below="@+id/pertanyaan_atas"
+        android:layout_marginTop="76dp"
+        android:text="TextView"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/score_bawah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pertanyaan_bawah"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="0"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="80dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/button_no_bawah"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent"
+            android:rotation="180"
+            android:text="No"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/button_yes_bawah"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:text="Yes"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
+
+
+</RelativeLayout>
