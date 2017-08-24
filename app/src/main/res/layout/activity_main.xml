@@ -7,16 +7,15 @@
     tools:context="com.example.wahyutrisvianto.secondapp.MainActivity">
 
     <LinearLayout
+        android:id="@+id/linear_atas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_yes_atas"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:background="@color/colorPrimary"
             android:rotation="180"
             android:text="Yes"
@@ -26,10 +25,8 @@
             android:id="@+id/button_no_atas"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:background="@color/colorAccent"
+            android:rotation="180"
             android:text="No"
             android:textColor="@android:color/background_light" />
     </LinearLayout>
@@ -48,7 +45,7 @@
         android:layout_alignStart="@+id/score_bawah" />
 
     <TextView
-        android:id="@+id/pertanyaan_atas"
+        android:id="@+id/soal_atas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/score_atas"
@@ -68,21 +65,21 @@
         android:src="@mipmap/garis" />
 
     <TextView
-        android:id="@+id/pertanyaan_bawah"
+        android:id="@+id/soal_bawah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/pertanyaan_atas"
-        android:layout_alignStart="@+id/pertanyaan_atas"
-        android:layout_below="@+id/pertanyaan_atas"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="66dp"
         android:text="TextView"
-        android:textSize="40dp" />
+        android:textSize="40dp"
+        android:layout_below="@+id/soal_atas"
+        android:layout_alignLeft="@+id/soal_atas"
+        android:layout_alignStart="@+id/soal_atas" />
 
     <TextView
         android:id="@+id/score_bawah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pertanyaan_bawah"
+        android:layout_below="@+id/soal_bawah"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
         android:text="0"
@@ -90,19 +87,17 @@
         android:textSize="80dp" />
 
     <LinearLayout
+        android:id="@+id/linear_bawah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_no_bawah"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
             android:background="@color/colorAccent"
-            android:rotation="180"
             android:text="No"
             android:textColor="@android:color/background_light" />
 
@@ -110,9 +105,6 @@
             android:id="@+id/button_yes_bawah"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:background="@color/colorPrimary"
             android:text="Yes"
             android:textColor="@android:color/background_light" />
